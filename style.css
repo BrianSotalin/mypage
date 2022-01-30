@@ -20,7 +20,7 @@ body {
 }
 
 /* 
-NAV
+MENU DESPLEGABLE
 */
 #navegador li {
     margin: 0px 5px;
@@ -33,24 +33,42 @@ NAV
     display: none;
 }
 
+#seccion1 a {
+    font-size: 16px;
+    font-weight: 700;
+    transition: .3s ease all;
+}
+
+#seccion1 a:hover {
+    letter-spacing: 5px;
+    color: lightslategrey;
+}
+
 #subseccion1 {
     position: absolute;
+    width: 150%;
     top: 100%;
     left: 0px;
     background-color: #272525;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     display: none;
     transition: .3s ease all;
 }
-#subseccion1 a{
-    font-size: 15px;
+
+#subseccion1 a {
+    font-size: 14px;
     color: silver;
     transition: .3s ease all;
 }
-#subseccion1 a:hover{
+
+#subseccion1 a:hover {
     color: brown;
 }
+
+/* 
+NAV
+*/
 
 
 .logo {
@@ -62,8 +80,8 @@ NAV
     text-decoration: none;
     text-transform: uppercase;
     color: #272525;
-    font-weight: bold;
-    font-size: 40px;
+    font-weight: bolder;
+    font-size: 50px;
 }
 
 .menu {
@@ -80,8 +98,15 @@ NAV
     color: #272525;
     font-weight: bold;
     font-size: 20px;
+    transition: .3s ease all;
+}
+.menu a:hover{
+    letter-spacing: 3px;
 }
 
+/* 
+CONTENIDO
+*/
 main {
     display: flex;
     align-items: center;
@@ -146,14 +171,24 @@ main .contenedor-texto {
     border-radius: 50%;
     padding: 10px;
 }
-.contenedor-texto .repo{
+.contenedor-texto .email{
+    text-decoration: none;
+    font-weight: bolder;
+    color: crimson;
+    transition: .5s ease all;
+}
+.contenedor-texto .email:hover{
+    letter-spacing: 2px;
+}
+
+.contenedor-texto .repo {
     display: block;
     width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 1px #272525 solid  ;
-    border-radius: 10px ;
+    border: 1px #272525 solid;
+    border-radius: 10px;
     padding: 10px 15px;
     text-decoration: none;
     text-transform: uppercase;
@@ -162,9 +197,30 @@ main .contenedor-texto {
     font-weight: 600;
     transition: .3s ease all;
 }
-.contenedor-texto .repo:hover{
+
+.contenedor-texto .repo:hover {
     background: #272525;
     color: whitesmoke;
+}
+footer {
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #272525;
+    font-weight: bolder;
+    font-size: 15px;
+}
+footer a{
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: .3s ease all;
+    color: darkcyan;
+    font-size: 17px;
+}
+footer a:hover{
+    letter-spacing: 4px;
 }
 
 /* 
@@ -187,7 +243,7 @@ RESPONSIVE
     }
 
     .contenedor-texto h2 {
-        font-size: 30px;
+        font-size: 50px;
 
     }
 
@@ -196,33 +252,51 @@ RESPONSIVE
     }
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:750px) {
     .container {
-        padding: 10px;
+        padding: 20px;
     }
 
     .menu a {
         font-size: 15px;
-    }
-}
-
-@media screen and (max-width:500px) {
-    .menu{
-        align-items: center;
-        justify-content: center;
-    }
-    .menu .menu-inicial{
-       display: none;
-    }
-    #navegador li{
-        display: block;
-    
     }
 
     main {
         display: block;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .logo {
+        margin-bottom: 0;
+    }
+    header{
+     
+        margin-bottom: -40px;
+    }
+
+    .menu {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu .menu-inicial {
+        display: none;
+    }
+
+    #navegador li {
+        display: block;
+
+    }
+
+    .container {
+        padding: 10px;
+    }
+    main{
+        padding: 0;
+        margin: 0;
     }
 
     .contenedor-texto h2 {
