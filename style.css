@@ -53,7 +53,7 @@ SECCION 1
 }
 
 #seccion1 a {
-    font-size: 16px;
+    font-size: 10px;
     font-weight: 700;
     transition: .3s ease all;
 }
@@ -76,11 +76,11 @@ SECCION 1
 }
 #subseccion1 h2{
     color: lightgrey;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 #subseccion1 a {
-    font-size: 14px;
+    font-size: 10px;
     color: silver;
     transition: .3s ease all;
 }
@@ -536,6 +536,11 @@ RESPONSIVE
 
     .contenedor-texto p {
         font-size: 15px;
+    }
+    footer,
+    footer a{
+        font-size: 12px;
+        margin-bottom: 20px;
     }
 }
 
