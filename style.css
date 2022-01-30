@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: whitesmoke;
+    display: block;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    margin: 5px auto;
+    padding: 30px 50px;
+    border-radius: 20px;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+/* 
+NAV
+*/
+#navegador li {
+    margin: 0px 5px;
+    padding: 10px;
+    width: 90%;
+    float: left;
+    list-style-type: none;
+    position: relative;
+    transition: .3s ease all;
+    display: none;
+}
+
+#subseccion1 {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: #272525;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    transition: .3s ease all;
+}
+#subseccion1 a{
+    font-size: 15px;
+    color: silver;
+    transition: .3s ease all;
+}
+#subseccion1 a:hover{
+    color: brown;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #272525;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+
+}
+
+.menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #272525;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+main .contenedor-img {
+    width: 100%;
+    margin-right: 40px;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+main .contenedor-texto {
+    width: 100%;
+    padding: 10px;
+
+}
+
+.contenedor-texto h2 {
+    font-size: 65px;
+    color: #403FBF;
+    margin: 0;
+}
+
+.contenedor-texto h2 .fa-globe-americas {
+    color: lightskyblue;
+    background: rgb(101, 211, 101);
+    border-radius: 50%;
+}
+
+.contenedor-texto .my-texto {
+    font-size: 30px;
+    color: darkcyan;
+    font-weight: bolder;
+}
+
+.contenedor-texto p {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #272525;
+}
+
+.contenedor-texto .bandera {
+    background: #272525;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.contenedor-texto .my-texto .fa-hamburger {
+    font-size: 25px;
+    color: orange;
+    background: brown;
+    border-radius: 50%;
+    padding: 10px;
+}
+.contenedor-texto .repo{
+    display: block;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px #272525 solid  ;
+    border-radius: 10px ;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #272525;
+    font-size: 18px;
+    font-weight: 600;
+    transition: .3s ease all;
+}
+.contenedor-texto .repo:hover{
+    background: #272525;
+    color: whitesmoke;
+}
+
+/* 
+RESPONSIVE
+*/
+@media screen and (max-width:900px) {
+
+    /* main {
+        display: block;
+        align-items: center;
+        justify-content: center;
+    } */
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .menu a {
+        font-size: 18px;
+    }
+
+    .contenedor-texto h2 {
+        font-size: 30px;
+
+    }
+
+    .contenedor-texto .my-texto {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .container {
+        padding: 10px;
+    }
+
+    .menu a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .menu{
+        align-items: center;
+        justify-content: center;
+    }
+    .menu .menu-inicial{
+       display: none;
+    }
+    #navegador li{
+        display: block;
+    
+    }
+
+    main {
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contenedor-texto h2 {
+        font-size: 40px;
+
+    }
+
+    .contenedor-texto p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:400px) {}
