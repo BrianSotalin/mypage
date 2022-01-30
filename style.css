@@ -343,6 +343,10 @@ main .contenedor-texto {
     border-radius: 50%;
 }
 
+.contenedor-texto h3{
+    font-size: 30px;
+    color: darkcyan;
+}
 .contenedor-texto .my-texto {
     font-size: 30px;
     color: darkcyan;
@@ -423,10 +427,12 @@ footer a {
     transition: .3s ease all;
     color: darkcyan;
     font-size: 17px;
+    
 }
 
 footer a:hover {
     letter-spacing: 4px;
+    color: crimson;
 }
 
 /* 
@@ -485,6 +491,9 @@ RESPONSIVE
         align-items: center;
         justify-content: center;
     }
+    footer {
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -533,13 +542,23 @@ RESPONSIVE
         font-size: 40px;
 
     }
+    .contenedor-texto h3{
+        font-size: 20px;
+    }
+    .contenedor-texto .bandera{
+        height: 30px;
+        width: 30px;
+    }
+    .contenedor-texto .my-texto .fa-hamburger{
+        font-size: 15px;
+    }
 
     .contenedor-texto p {
         font-size: 15px;
     }
     footer,
     footer a{
-        font-size: 12px;
+        font-size: 10px;
         margin-bottom: 20px;
     }
 }
