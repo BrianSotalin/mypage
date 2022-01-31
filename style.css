@@ -11,6 +11,7 @@ body {
     align-items: center;
 }
 
+
 .container {
     width: 80%;
     margin: 5px auto;
@@ -415,7 +416,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #272525;
+    color: #444343;
     font-weight: bolder;
     font-size: 15px;
 }

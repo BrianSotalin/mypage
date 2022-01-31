@@ -1,10 +1,10 @@
 const typed = new Typed('.typed',{
     strings:[
-        '<i class="my-texto">My name is Braian Sotalin</i>',
+        '<i class="my-texto">I am Braian Sotalin</i>',
         '<i class="my-texto">I am a software developer</i> ',
-        '<i class="my-texto">I like web development</i>',
         '<i class="my-texto">I am from Ecuador <img class="bandera" src="./img/ecuador.png" ></i>',
-        '<i class="my-texto">I like hamburguer <i class="fas fa-hamburger"></i></i>'
+        '<i class="my-texto">I like web development</i>',
+        '<i class="my-texto">Also I like hamburguer <i class="fas fa-hamburger"></i></i>'
     ],
     stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
 	typeSpeed: 45, // Velocidad en mlisegundos para poner una letra,
