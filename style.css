@@ -9,15 +9,30 @@ body {
     background: whitesmoke;
     display: block;
     align-items: center;
+    overflow: hidden;
+}
+.dark-mode{
+    margin: 10px;
+    display: block;
+    align-items: flex-end;
+    text-align: end;
+}
+.dark-mode .claro{
+    color: orange;
+    display: none;
+}
+.dark-mode .oscuro{
+    color: #272525;
 }
 
-
 .container {
-    width: 80%;
-    margin: 5px auto;
-    padding: 30px 50px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 50px;
     border-radius: 20px;
     font-family: 'Zen Kurenaido', sans-serif;
+    border-radius: 20px;
+    box-shadow: 1px 5px 3px 2px  #2725252f;
 }
 
 /* 
@@ -33,9 +48,6 @@ MENU DESPLEGABLE
     text-decoration: none;
 }
 
-
-
-
 /* 
 SECCION 1
 */
@@ -46,6 +58,7 @@ SECCION 1
     float: left;
     list-style-type: none;
     position: relative;
+    letter-spacing: 1px;
     transition: .3s ease all;
 }
 #seccion1 {
@@ -78,6 +91,8 @@ SECCION 1
 #subseccion1 h2{
     color: lightgrey;
     font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 #subseccion1 a {
@@ -103,16 +118,19 @@ SECCION 2
 */
 
 #navegador #seccion2 {
-    margin: 0px 5px;
+    margin: 0px ;
+
     padding: 10px;
-    width: 200%;
-    float: left;
+    width: 100%;
+    float: right;
     list-style-type: none;
     position: relative;
     transition: .3s ease all;
+    
 }
 #seccion2 {
     display: block;
+    /* margin-right: 200px; */
 
 }
 
@@ -129,7 +147,7 @@ SECCION 2
 
 #subseccion2 {
     position: absolute;
-    width: 70%;
+    width: 100%;
     top: 100%;
     left: 0px;
     background-color: #272525;
@@ -154,10 +172,11 @@ SECCION 3
 */
 
 #navegador #seccion3 {
-    margin: 0px 5px;
+    margin: 0 ;
+    margin-left: 250px;
     padding: 10px;
-    width: 20%;
-    float: left;
+    width: 10%;
+    float:left;
     list-style-type: none;
     position: relative;
     transition: .3s ease all;
@@ -206,15 +225,14 @@ SECCION 4
 */
 
 #navegador #seccion4 {
-    margin: 0px 5px;
+    margin: 0 auto;
+    /* margin-right: auto; */
     padding: 10px;
-    width: 33%;
+    width: 15%;
     float: left;
     list-style-type: none;
     position: relative;
     transition: .3s ease all;
-   
-  
 }
 #seccion4 {
     display: block;
@@ -234,7 +252,7 @@ SECCION 4
 
 #subseccion4 {
     position: absolute;
-    width: 60%;
+    width: 100%;
     top: 100%;
     left: 0px;
     background-color: #272525;
@@ -258,8 +276,6 @@ SECCION 4
 /* 
 NAV
 */
-
-
 .logo {
     display: flex;
     align-items: center;
@@ -275,6 +291,7 @@ NAV
 
 .menu {
     display: flex;
+    width: auto;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 60px;
@@ -412,7 +429,7 @@ main .contenedor-texto {
 }
 
 footer {
-
+    margin: 10px 0;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -435,19 +452,91 @@ footer a:hover {
     letter-spacing: 4px;
     color: crimson;
 }
-
+/* 
+MODO OSCURO
+*/
+body.dark .dark-mode .claro{
+    display: block;
+}
+body.dark .dark-mode .oscuro{
+    display: none;
+}
+body.dark{
+    background: #272525;
+}
+body.dark .container{
+    background: #272525;
+}
+body.dark .logo{
+    color: beige;
+}
+body.dark   #seccion1 a{
+    color: cornsilk;
+}
+body.dark   #seccion2 a{
+    color: wheat;
+}
+body.dark #seccion3 a{
+    color: wheat;
+}
+body.dark #seccion4 a{
+    color: wheat;
+}
+body.dark .contenedor-texto p{
+    color: whitesmoke;
+}
+body.dark .contenedor-texto .repo{
+    border: 1px beige solid;
+    color: beige;
+}
+body.dark .contenedor-texto .repo:hover{
+    background: beige;
+    color: #272525;
+}
+body.dark #subseccion1{
+    background: #444343;
+}
+body.dark #subseccion2{
+    background: #444343;
+}
+body.dark #subseccion2 a{
+    color: aliceblue;
+}
+body.dark #subseccion3{
+    background: #444343;
+}
+body.dark #subseccion3 a{
+    color: aliceblue;
+}
+body.dark #subseccion4{
+    background: #444343;
+}
+body.dark #subseccion4 a{
+    color: aliceblue;
+}
 /* 
 RESPONSIVE
 */
+@media screen and (max-width:1000px) {
+    #navegador #seccion3{
+        margin-left: 150px;
+        width: 15%;
+    }
+    #navegador #seccion4{
+        width: 20%;
+    }
+}
 @media screen and (max-width:900px) {
 
     #navegador{
         margin: 0;
         width: 100%;
-    
     }
+    #navegador #seccion4{
+        width: 28%;
+    }
+   
     .container {
-        width: 90%;
         padding: 30px;
     }
 
@@ -468,12 +557,24 @@ RESPONSIVE
         font-size: 25px;
     }
 }
+@media  screen and (max-width:800px) {
+    body{
+        overflow: scroll;
+    }
+}
 
 @media screen and (max-width:750px) {
     #seccion2 a,
     #seccion3 a,
     #seccion4 a {
       font-size: 15px; 
+    }
+    #navegador #seccion3{
+        margin-left: 80px;
+        width: 24%;
+    }
+    #navegador #seccion4{
+        width: 33%;
     }
     .container {
         padding: 20px;
@@ -493,7 +594,21 @@ RESPONSIVE
         justify-content: center;
     }
     footer {
-        margin-bottom: 10px;
+        margin: 10px 0;
+    }
+}
+@media  screen and (max-width:600px) {
+    #navegador #seccion3{
+        margin-left: 40px;
+    }
+}
+@media screen and (max-width:550px) {
+    #navegador #seccion3{
+        margin-left: 30px;
+        width: 24%;
+    }
+    #navegador #seccion4{
+        width: 35%;
     }
 }
 

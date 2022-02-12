@@ -25,3 +25,18 @@ function ver(n) {
 function ocultar(n) {
     document.getElementById("subseccion"+n).style.display="none"
     }
+    
+const vistaClaro = document.querySelector('#op-uno');
+
+vistaClaro.addEventListener('click', (event) => {
+    event.preventDefault();
+	document.body.classList.toggle('dark');//toggle agrega una clase si no tiene y la elimina si ya la tiene
+	vistaClaro.classList.toggle('active');
+});
+const vistaOscuro= document.querySelector('#op-dos');
+
+vistaOscuro.addEventListener('click', (event) => {
+    event.preventDefault();
+	document.body.classList.toggle('dark');//toggle agrega una clase si no tiene y la elimina si ya la tiene
+	vistaOscuro.classList.toggle('active');
+});
