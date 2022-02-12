@@ -10,6 +10,7 @@ body {
     display: block;
     align-items: center;
     overflow: hidden;
+    transition: .3s ease all;
 }
 .dark-mode{
     margin: 10px;
@@ -33,6 +34,7 @@ body {
     font-family: 'Zen Kurenaido', sans-serif;
     border-radius: 20px;
     box-shadow: 1px 5px 3px 2px  #2725252f;
+    transition: .5s ease all;
 }
 
 /* 
