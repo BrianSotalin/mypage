@@ -40,3 +40,31 @@ vistaOscuro.addEventListener('click', (event) => {
 	document.body.classList.toggle('dark');//toggle agrega una clase si no tiene y la elimina si ya la tiene
 	vistaOscuro.classList.toggle('active');
 });
+
+let seg=1;
+console.log(seg);
+function actualizar (){
+    
+        seg=seg+1;
+        console.log(seg);
+        par(seg);
+        setTimeout(actualizar,5000);
+    
+}
+function par(){
+    if(seg%2==0){
+        document.getElementById('imagen').src='./img/react.svg'
+    } else if(seg%3==0){
+        document.getElementById('imagen').src='./img/code.svg'
+    }else {
+        document.getElementById('imagen').src='./img/pic.svg'
+    }
+}
+
+actualizar(seg);
+// par(seg);
+if(seg<0){
+    seg=10;
+}
+console.log(seg);
+
